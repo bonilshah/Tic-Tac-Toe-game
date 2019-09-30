@@ -1,0 +1,118 @@
+<html>
+<head>
+  <link rel="Stylesheet" href="style2.css">
+
+<style>
+
+</style>
+</head>
+<body>
+  <center>
+    <form name="f1">
+    <table>
+      <tr>
+        <td><input type="button" id="b11" onclick="getValue(this)"/></td>
+        <td><input type="button" id="b12" onclick="getValue(this)"/></td>
+        <td><input type="button" id="b13" onclick="getValue(this)"/></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" id="b21" onclick="getValue(this)"/></td>
+        <td><input type="button" id="b22" onclick="getValue(this)"/></td>
+        <td><input type="button" id="b23" onclick="getValue(this)"/></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" id="b31" onclick="getValue(this)"  /></td>
+        <td><input type="button" id="b32" onclick="getValue(this)"/></td>
+        <td><input type="button" id="b33" onclick="getValue(this)"/></td>
+      </tr>
+
+
+  </table>
+  <br/>
+    <button onclick="reset()">Reset</button>
+</form>
+</center>
+
+<script>
+var cnt=0;
+
+function getValue(obj){
+  if(cnt%2==0){
+  obj.value="X";
+  obj.style.color = "#0000FF";
+}
+  else {
+    obj.value="O";
+    obj.style.color = "#FF0000";
+  }
+
+var w1 = document.getElementById("b11").value;
+var w2 = document.getElementById("b12").value;
+var w3 = document.getElementById("b13").value;
+var w4 = document.getElementById("b21").value;
+var w5 = document.getElementById("b22").value;
+var w6 = document.getElementById("b23").value;
+var w7 = document.getElementById("b31").value;
+var w8 = document.getElementById("b32").value;
+var w9 = document.getElementById("b33").value;
+
+
+
+
+
+
+obj.disabled=true;
+cnt++;
+
+if(w1 == w2 && w2 == w3 && w1.length!=0){
+  alert(w1 + " win");
+}
+
+ if(w4 == w5 && w5 == w6 && w5.length!=0){
+  alert(w5 + " win");
+}
+
+ if(w7 == w8 && w8 == w9 && w9.length!=0){
+  alert(w8 + " win");
+}
+
+ if(w1 == w4 && w4 == w7 && w7.length!=0){
+  alert(w1 + " win");
+}
+
+ if(w2 == w5 && w5 == w8 && w8.length!=0){
+  alert(w8 + " win");
+}
+
+ if(w3 == w6 && w6 == w9 && w6.length!=0){
+  alert(w6 + " win");
+}
+
+if(w1 == w5 && w5 == w9 && w5.length!=0){
+  alert(w5 + " win");
+}
+
+if(w3 == w5 && w5 == w7 && w7.length!=0){
+  alert(w7 + " win");
+}
+s}
+
+function reset(){
+  w1="";
+  w2="";
+  w3="";
+  w4="";
+  w5="";
+  w6="";
+  w7="";
+  w8="";
+  w9="";
+
+}
+
+</script>
+
+</body>
+</html>
